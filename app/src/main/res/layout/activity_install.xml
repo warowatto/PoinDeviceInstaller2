@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:columnCount="2"
+            android:padding="16dp">
+
+            <TextView
+                android:text="MAC"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:id="@+id/txtMacAddress"
+                tools:text="AA:BB:CC:DD:EE:FF" />
+
+            <android.support.v4.widget.Space
+                android:layout_height="4dp"
+                android:layout_columnSpan="2" />
+
+            <TextView
+                android:text="RSSI"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:id="@+id/txtRssi"
+                tools:text="1289371923" />
+
+            <android.support.v4.widget.Space
+                android:layout_height="4dp"
+                android:layout_columnSpan="2" />
+
+            <TextView
+                android:layout_marginRight="4dp"
+                android:text="업체명"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:id="@+id/txtCompanyName"
+                tools:text="업체명" />
+
+            <android.support.v4.widget.Space
+                android:layout_height="4dp"
+                android:layout_columnSpan="2" />
+
+            <TextView
+                android:layout_columnSpan="2"
+                android:text="사업자 등록번호"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:layout_columnSpan="2"
+                tools:text="0000-0000-000000" />
+        </GridLayout>
+
+        <com.dlazaro66.qrcodereaderview.QRCodeReaderView
+            android:id="@+id/qrcodeReaderView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:columnCount="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginRight="8dp"
+            android:text="장비타입"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:layout_gravity="right"
+            android:textSize="18dp"
+            tools:text="세탁기" />
+
+        <TextView
+            android:layout_marginRight="8dp"
+            android:text="투입가능한 최소금액 값"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:layout_gravity="right"
+            android:textSize="18dp"
+            tools:text="투입 단위 당 펄스" />
+
+        <TextView
+            android:layout_marginRight="8dp"
+            android:text="투입 단위 당 펄스 수"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:layout_gravity="right"
+            android:textSize="18dp"
+            tools:text="세탁기" />
+    </GridLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editDeviceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="장비이름"
+            android:inputType="text"
+            android:maxLength="10"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editDisplayName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="장비위치"
+            android:inputType="text"
+            android:maxLength="20"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editDefaultPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="최소금액"
+            android:inputType="number"
+            android:maxLength="7"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorAccent"
+            android:text="장치 설정 가져오기"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="장치 등록하기"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>
